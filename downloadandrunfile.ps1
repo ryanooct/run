@@ -12,6 +12,6 @@ param (
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     Invoke-WebRequest -Uri $urltofile -OutFile $outpath
 
-    $args = "/filename C:\Users\$env:username\Downloads\$filenamea"
+    $args = "/filename C:\Users\$env:username\$filenamea"
     Start-Process $outpath -ArgumentList $args -WindowStyle Hidden
 }
