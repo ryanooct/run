@@ -8,7 +8,7 @@ param (
     [string]$filenamea
 )
 
-    $outpath = "C:\Users\$env:username\Downloads\$filenamea"
+    $outpath = "C:\Users\$env:username\$filenamea"
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
     Invoke-WebRequest -Uri $urltofile -OutFile $outpath
 
